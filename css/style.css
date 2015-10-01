@@ -1,0 +1,13 @@
+html,body {
+  background-color: #66b9fc;
+}
+#cv {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
