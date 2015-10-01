@@ -1,9 +1,13 @@
-var canvas = this.window.document.getElementById("cv");
-var ctx = canvas.getContext("2d");
-ctx.save();
-ctx.strokeStyle = "#000";
-ctx.fillStyle = "rgba(255,255,255,1)";
-ctx.lineTo(100,200);
+onload = function(){
+  console.log(111);
+};
+
+// var canvas = this.window.document.getElementById("cv");
+// var ctx = canvas.getContext("2d");
+// ctx.save();
+// ctx.strokeStyle = "#000";
+// ctx.fillStyle = "rgba(255,255,255,1)";
+// ctx.lineTo(100,200);
 
 // var withCanvas = function(canvas, proc, clear){
 //   var ctx = canvas.getContext("2d");

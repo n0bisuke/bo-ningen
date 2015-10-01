@@ -123,9 +123,9 @@ AutoPlayerController.prototype.control = function(player,borders,gravity){
             player.jump();
           }else{
             //たまに気まぐれでジャンプ
-            if(Math.random()<this.rate_jump_while_running){
-              player.jump();
-            }
+            // if(Math.random()<this.rate_jump_while_running){
+            //   player.jump();
+            // }
           }
         }
       }
