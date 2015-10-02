@@ -72,5 +72,5 @@ onload = function(){
         run_speed: 10
       });
     }
-  },16);
+  },64);
 };
