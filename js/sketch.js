@@ -14,7 +14,7 @@ onload = function(){
   };
 
   var openPopup = function(){
-    var p = popup_manager.createPopup(100*(Math.random() - 0.2),100*(Math.random() - 0.2),200+Math.random()*400,200+Math.random()*200);
+    var p = popup_manager.createPopup(1000*(Math.random() - 0.2),100*(Math.random() - 0.2),200+Math.random()*400,200+Math.random()*200);
     p.open();
   };
   document.getElementById("btn").addEventListener("click",function(){
@@ -35,9 +35,7 @@ onload = function(){
   ds.on('send',function(data){
     console.log('じゃんぷ');
     player.jump();
-    // openPopup();
-    var p = popup_manager.createPopup(100*(Math.random() - 0.2),100*(Math.random() - 0.2),200+Math.random()*400,200+Math.random()*200);
-    p.open();
+    openPopup();
   });
 
   var tid = setInterval(function(){
@@ -60,7 +58,7 @@ onload = function(){
           player = null;
         }
       }
-      
+
     }else if(popup_manager.count()>0){
       var move_to = popup_manager.getRandomPointInPopup();
       player = new Player({
@@ -74,5 +72,5 @@ onload = function(){
         run_speed: 10
       });
     }
-  },50);
+  },16);
 };

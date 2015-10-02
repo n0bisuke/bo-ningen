@@ -9,6 +9,7 @@ PopupManager.count = 0;
 PopupManager.prototype.createPopup = function(x,y,width,height){
   var p = new Popup(++this.id,x,y,width,height);
   this.pool.push(p);
+  console.log(this.pool);
   return p;
 };
 PopupManager.prototype.notify = function(type,ev,id){
@@ -67,6 +68,9 @@ PopupManager.prototype.hideHelp = function(){
   });
 };
 
+/**
+ポップアップ
+*/
 var Popup = function(id,x,y,width,height){
   this.window = null;
   this.rect = new Rect(x,y,width,height);
@@ -74,12 +78,14 @@ var Popup = function(id,x,y,width,height){
   this.is_dirty = false;
   this.dirty_rect = null;
 };
+
 Popup.prototype.open = function(){
   var s = "top="+this.rect.y+"left="+this.rect.y+",width="+this.rect.width+",height="+this.rect.height;
   s += ",menubar=no,toolbar=no,location=no,status=no,scrollbars=no";
   //キャッシュ対策
   this.window = window.open("child.html?id="+this.id+"&date="+(new Date()).getTime(),"child"+this.id,s);
 };
+
 Popup.prototype.close = function(){
   this.window.close();
 };
